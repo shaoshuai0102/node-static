@@ -190,7 +190,7 @@ suite.addBatch({
 }).addBatch({
   'serving jsonp': {
     topic : function(){
-      request.get(TEST_SERVER + '/hello.js?_callback=abc', this.callback);
+      request.get(TEST_SERVER + '/hello.js?callback=abc', this.callback);
     },
     'should respond with 200' : function(error, response, body){
       assert.equal(response.statusCode, 200);

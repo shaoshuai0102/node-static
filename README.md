@@ -84,8 +84,8 @@ More on intercepting errors bellow.
 
 ### Serving jsonp request #
 
-Any request with query like `?_callback=abc` will be treated as a jsonp request.
-For example, requesting a json file named 'test' with path `/test?_callback=abc`:
+Any request with query like `?callback=abc` will be treated as a jsonp request.
+For example, requesting a json file named 'test' with path `/test?callback=abc`:
 
     {
         "foo": "bar"
@@ -166,13 +166,13 @@ example: `{ 'X-Hello': 'World!' }`
 
 > defaults to `{}`
 
-#### `jsonp-hook` #
+#### `jsonp` #
 
-Sets jsonp hook.
+Sets the accepted callback function name in a jsonp request. 
 
-example: `{jsonpHook: 'callback'}`
+example: `{jsonp: '_callback'}`
 
-> defaults to `_callback`
+> defaults to `callback`
 
 Command Line Interface
 ----------------------
